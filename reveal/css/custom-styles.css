@@ -1,0 +1,17 @@
+.greeting h1 {
+  font-size: 3.5em;
+}
+
+.greeting h2 {
+  font-size: 2em;
+}
+
+.greeting p {
+  margin: 100px 0 20px;
+  font-size: 0.7em;
+}
+
+span {
+	font-weight: 700;
+  color: #715238;
+}

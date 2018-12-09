@@ -139,8 +139,14 @@
 						<p class="fragment grow">grow</p>
 						<p class="fragment shrink">shrink</p>
 						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
-						<p class="fragment current-visible">current-visible</p>
+						<p>
+							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+							<span style="display: inline-block;" class="fragment fade-up">up, </span>
+							<span style="display: inline-block;" class="fragment fade-down">down, </span>
+							<span style="display: inline-block;" class="fragment fade-left">left</span>
+						</p>
+						<p class="fragment fade-in-then-out">fade-in-then-out</p>
+						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
 						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
 					</section>
 				</section>
@@ -404,17 +410,6 @@ Reveal.addEventListener( 'customevent', function() {
 				]
 			});
 
-		</script>
-
-		<script>
-		var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
-		(function(d, t) {
-		var g = d.createElement(t),
-			s = d.getElementsByTagName(t)[0];
-		g.async = true;
-		g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g, s);
-		})(document, 'script');
 		</script>
 
 	</body>

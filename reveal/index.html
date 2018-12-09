@@ -1,21 +1,13 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 	<head>
 		<meta charset="utf-8">
-
-		<title>reveal.js – The HTML Presentation Framework</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+		<title>ES6 classes</title>
+
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -28,501 +20,284 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-					</p>
-					<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553M&placement=revealjscom" id="_carbonads_js"></script>
-				</section>
+				<section class="greeting">
+					<h1 style="font-size: 3.5em">{ES6}</h1>
+					<h2 style="font-size: 2em"> classes &amp; inheritance</h2>
+					<p style="margin: 100px 0 20px; font-size: 0.7em">Created by <a href="https://github.com/aliaksandraRybak" target="_blank">Aliaksandra Rybak</a></p>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Hello everyone, my name is Alex and thee topic of my presentation is ES6 classes and inheritance.
 					</aside>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					<h2>Some background info</h2>
+					<p>In the early history of the JS, a cloud of animosity formed over the lack of a proper syntax for defining classes. The ES6 spec has introduced the <strong><span style="color: #901818">class</span></strong> keyword. This presentation will show what ES6 offers us regarding to classes.</p>
+
+
+					<aside class="notes">
+						In the early history of the JavaScript language, a cloud of animosity formed over the lack of a proper syntax for defining classes like in most object oriented languages. It wasn’t until the ES6 spec release in 2015 that the class keyword was introduced. This presentation will show us what ES6 offers us regarding to classes.
+						At its most basic level, the class keyword in ES6 is described as syntactical sugar over the existing prototype-based inheritance and is equivalent to a constructor function definition. Though it may seem redundant that a new keyword was introduced to wrap an already existing feature, it leads to readable code and lays the foundation upon which future object oriented features can be built.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+					<h2>Defining classes</h2>
+					<pre>
+						<code data-trim>
+							class Character {};
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
+							//unnamed
+							const character = class {};
+
+
+							//named
+							const char = class Character {};
+						</code>
+					</pre>
+
+
+					<aside class="notes">
+						Making a transition from using the older object constructors to the newer ES6 classes shouldn’t be difficult since the class keyword is just a special function and exhibits expected function behavior. For example, just like a function, a class can be defined by either a declaration or an expression, where the latter can be named or unnamed. It is worthy of noting that they are not hoisted, though.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Much more</h2>
+					<section>
+						<h2 style="font-size: 1.4em">Simple class example</h2>
+						<pre>
+							<code data-trim>
+								class Character {
+									constructor(name, health, damage) {
+										this.name = name;
+										this.health = health;
+										this.damage = damage;
+									}
+								}
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							Let's take a look at the simple class of a game character. A distinctive feature of classes is the function called constructor. It is simply a method which purpose is to initialize an instance of the class. This means that whenever an instance of a class is created, the constructor of the class is invoked automatically to do something on that instance; it could maybe initialize the object’s properties with received parameters or default values when the former aren’t available.
+						</aside>
+					</section>
+
+					<section>
+						<h2 style="font-size: 1.4em">Getters and setters</h2>
+						<pre>
+							<code data-trim>
+								get currName() {
+									return `${this.name}`;
+								}
+
+								set currName(value) {
+									this.name = value;
+								}
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							ES6 classes bring new syntax for getters and setters on object properties. Get and set allows us to run code on the reading or writing of a property. The get syntax binds an object property to a function that will be called when that property is looked up. The set does the same when there is an attempt to set that property.
+						</aside>
+					</section>
+
+					<section>
+						<h2 style="font-size: 1.4em">Class methods</h2>
+						<pre>
+							<code data-trim>
+								static defaultCharacter() {
+									return new Character("Alex", 100, 10);
+								}
+
+								toString() {
+									return `This is ${this.name} the ${this.constructor.name}`;
+								}
+
+								info() {
+									return `${this.constructor.name} ${this.name}, health: ${this.health}, damage: ${this.damage}`;
+								}
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							Static methods resemble prototype methods in the fact that they define the behaviour of the invoking object but differ from their prototype counterparts as they cannot be invoked by an instance of a class. As MDN describes it, “Static methods are called without instantiating their class and are also not callable when the class is instantiated.” In other words, static methods have no access to data stored in specific objects.
+							toString() and info() are simple methods I added to show what a terse and clean syntax ES6 offers us.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 style="font-size: 1.4em">Character's subclass</h2>
+						<pre>
+							<code data-trim>
+								class Warrior extends Character {
+									constructor(name, health, damage, defence) {
+										super(name, health, damage);
+										this.defence = defence;
+									}
+
+									info() {
+										return (super.info() + `, defence: ${this.defence}`);
+									}
+								}
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							In object oriented programming, it’s a good practice to create a base class that holds some generic methods and attributes and then create other more specific classes that inherit these generic methods from the base. ES6 introduced the extends keyword that makes inheritance very easy. A subclass can easily inherit attributes from a base class like this:
+							We have created a subclass here — Warrior. We make use of the super keyword within the constructor method of the Warrior class to invoke the super class’ constructor. Also the Warrior class overrides its parent’s method info() using, again, the super keyword to refer to parent’s method. And we can’t see it here, but Warrior class inherits the method of the Character class toString().
+						</aside>
+					</section>
+
+					<section>
+						<h2 style="font-size: 1.4em">Character's subclass</h2>
+						<pre>
+							<code data-trim>
+								const warrior = new Warrior("Tom", 120, 15, 10);
+
+								console.log(warrior.info()); //"Warrior Tom, health: 120, damage: 15, defence: 10"
+
+								console.log(warrior.toString()); //"This is Tom the Warrior"
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							Okay, so if we try creating an instance of the Warrior class and invoke its own method and an inherited method, the result will be just as expected.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<img src="https://wanago.io/wp-content/uploads/2018/03/prototype.png" alt="proto">
+
+
+						<aside class="notes">
+							At the beginning of the presentation, I said that most of the new keywords in ES6 are merely syntactical sugar over the existing prototype-based inheritance. Let’s now take a look under the sheets and see how the prototype chain works.
+							While it’s nice to define classes and perform inheritance with the new ES6 keywords, it’s even nicer to understand how things work at the canonical level. Let’s take a look at JavaScript objects: all JavaScript objects have a private property that points to a second object (except for a few rare cases where it points to null) associated with them, this second object is called the prototype.
+							If you request a property on an object that the object doesn't have, it says: "I don't know. Ask my prototype." and JavaScript checks the object's prototype for that property.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Prototypes</h2>
+						<pre>
+							<code data-trim>
+								const jessy = {name: 'Jessy'},
+									tom = {name: 'Tom'};
+
+								Object.hasOwnProperty(jessy, toString); //false
+								Object.hasOwnProperty(tom, toString); //false
+
+								jessy.toString(); //'[object Object]'
+								tom.toString(); //'[object Object]'
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							Here we have 2 objects, neither of which has toString method. But we can call it anyway! That's because, while neither jessy nor tom has a toString property, their prototype – Object.prototype - does. And that’s the case. If several objects share the same prototype they can all access that prototype's properties, immediately after we assign them, without us having to copy those properties or methods to each individual object.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Prototypes</h2>
+						<pre style="font-size: 0.5em">
+							<code data-trim>
+								const Character = function(name, health, damage) {
+									this.name = name;
+									this.health = health;
+									this.damage = damage;
+								};
+
+								const Warrior = function(name, health, damage, defence) {
+									Character.call(this, name, health, damage);
+									this.defence = defence;
+								};
+								Object.setPrototypeOf(Warrior.prototype, Character.prototype);
+
+								const war = new Warrior("Jack", 100, 20, 15);
+
+								console.log(Object.getPrototypeOf(war) === Warrior.prototype); //true
+								console.log(Character.prototype.isPrototypeOf(war)) //true
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							Before ES6 spec was released, we had to set prototypes of newly created objects by hand if we wanted them to inherit properties of other object.
+							Here we create Character and Warrior constructors, where Warrior “inherits” Character. A new object is created, inheriting from Warrior.prototype. Then we get the prototype of an object through the Object.getPrototypeOf function and see that so-called inheritance worked.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Prototypes</h2>
+						<pre>
+							<code data-trim>
+								const warrior = new Warrior("Tom", 120, 20, 15);
+
+								console.log(typeof Warrior); // 'function'
+								console.log(Object.getPrototypeOf(warrior) === Warrior.prototype); // true
+								console.log(Character.prototype.isPrototypeOf(warrior)); // true
+							</code>
+						</pre>
+
+
+						<aside class="notes">
+							For clarity of presentation, I should remind you that ES6 classes are not a new language construction, all the work is done by prototypes under the hood. So if we create new objects using classes I’ve shown you before, we will see that these are just prototypes in the end.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>What issues do classes solve?</h2>
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+						<li style="margin: 0.7em 0">We have a <span style="color: #901818">super</span> function inside of a constructor</li>
+						<li style="margin: 0.7em 0">There is no need to call Object.setPrototypeOf</li>
+						<li style="margin: 0.7em 0">You can extend any class easily and in a very natural way</li>
 					</ul>
+
+
+					<aside class="notes">
+						What issues does it solve, aside from that? Quite a few, actually!
+						We have a super function inside of a constructor – it calls a constructor of a class that is being extended.
+						There is no need to call Object.setPrototypeOf to extend another prototype
+						You can extend any class easily and in a very natural way.
+						Understanding prototypes is one of the crucial tasks for an aspiring JavaScript developer. Currently, with the ES6 classes syntax popularized, it might seem even harder, as it implicates that there are some classes involved, but there aren’t any. It doesn’t make it less important though.
+					</aside>
 				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+				<section>
+					<h2>Thanks for attention!</h2>
+					<img style="width: 700px" src="https://cdn-images-1.medium.com/max/2000/1*0FZSrNhvMftanBIw9GZujw.png" alt="cat">
 				</section>
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-
-			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
-
 		</script>
-
-		<!-- Everything below this point is only used for the reveal.js demo page -->
-
-		<a class="fork-reveal" style="display: none;" href="https://github.com/hakimel/reveal.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork reveal.js on GitHub"></a>
-
-		<div class="share-reveal" style="display: none; position: absolute; bottom: 16px; left: 50%; margin-left: -139px; z-index: 20;">
-			<a class="share-reveal-editor" href="https://slides.com">Try the online editor</a>
-
-			<a class="share-reveal-facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Frevealjs.com">
-				<svg viewBox="-8 -8 48 48" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#FFFFFF" d="M25.613-4.557c0,0-3.707,0-6.166,0c-3.662,0-7.732,1.535-7.732,6.835c0.019,1.845,0,3.613,0,5.603H7.481 v6.728h4.366v19.37h8.021V14.48h5.295l0.479-6.618h-5.913c0,0,0.016-2.946,0-3.8c0-2.093,2.184-1.974,2.312-1.974 c1.042,0,3.059,0.003,3.578,0v-6.646H25.613z"/>
-				</svg>
-			</a>
-
-			<a class="share-reveal-twitter" href="http://twitter.com/share?url=http%3A%2F%2Frevealjs.com&text=reveal.js%20-%20The%20HTML%20presentation%20framework&via=revealjs&related=revealjs">
-				<svg viewbox="0 0 2000 1625.36" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-					<path d="m 1999.9999,192.4 c -73.58,32.64 -152.67,54.69 -235.66,64.61 84.7,-50.78 149.77,-131.19 180.41,-227.01 -79.29,47.03 -167.1,81.17 -260.57,99.57 C 1609.3399,49.82 1502.6999,0 1384.6799,0 c -226.6,0 -410.328,183.71 -410.328,410.31 0,32.16 3.628,63.48 10.625,93.51 -341.016,-17.11 -643.368,-180.47 -845.739,-428.72 -35.324,60.6 -55.5583,131.09 -55.5583,206.29 0,142.36 72.4373,267.95 182.5433,341.53 -67.262,-2.13 -130.535,-20.59 -185.8519,-51.32 -0.039,1.71 -0.039,3.42 -0.039,5.16 0,198.803 141.441,364.635 329.145,402.342 -34.426,9.375 -70.676,14.395 -108.098,14.395 -26.441,0 -52.145,-2.578 -77.203,-7.364 52.215,163.008 203.75,281.649 383.304,284.946 -140.429,110.062 -317.351,175.66 -509.5972,175.66 -33.1211,0 -65.7851,-1.949 -97.8828,-5.738 181.586,116.4176 397.27,184.359 628.988,184.359 754.732,0 1167.462,-625.238 1167.462,-1167.47 0,-17.79 -0.41,-35.48 -1.2,-53.08 80.1799,-57.86 149.7399,-130.12 204.7499,-212.41" style="fill:#ffffff"/>
-				</svg>
-			</a>
-		</div>
-
-		<style>
-			/* Social sharing */
-			.share-reveal a {
-				display: inline-block;
-				height: 34px;
-				line-height: 32px;
-				padding: 0 10px;
-				color: #fff;
-				font-family: Helvetica, sans-serif;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: 12px;
-				vertical-align: top;
-				text-transform: uppercase;
-				box-sizing: border-box;
-			}
-
-			.share-reveal .share-reveal-editor {
-				line-height: 30px;
-			}
-
-			.share-reveal svg {
-				vertical-align: middle;
-			}
-
-			.share-reveal a + a {
-				margin-left: 10px;
-			}
-
-			.share-reveal-editor {
-				border: 2px solid #fff;
-			}
-
-			.share-reveal-twitter,
-			.share-reveal-follow {
-				background-color: #00aced;
-			}
-
-			.share-reveal-facebook {
-				background-color: #4B71B8;
-			}
-
-			/* Advertising */
-			#carbonads {
-				width: 370px;
-				min-height: 100px;
-				font-size: 18px;
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				padding: 10px;
-				margin: 40px auto 0 auto;
-				font-size: 16px;
-				z-index: 10;
-				text-align: left;
-			}
-
-			#carbonads .carbon-img img {
-				float: left;
-				margin: 0 10px 0 0;
-				border: 0;
-				box-shadow: none;
-			}
-
-			#carbonads .carbon-poweredby {
-				display: block;
-				margin-top: 10px;
-				color: #aaa;
-			}
-		</style>
-
-		<script>
-		var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
-		(function(d, t) {
-		var g = d.createElement(t),
-			s = d.getElementsByTagName(t)[0];
-		g.async = true;
-		g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g, s);
-		})(document, 'script');
-		</script>
-
-		<script>
-			[].slice.call( document.querySelectorAll( '.share-reveal-facebook, .share-reveal-twitter' ) ).forEach( function( element ) {
-				element.addEventListener( 'click', function( event ) {
-					event.preventDefault();
-					var width = 500, height = 300;
-					var winTop = window.screenY + (window.screen.height / 2) - (height / 2);
-					var winLeft = window.screenX + (window.screen.width / 2) - (width / 2);
-					window.open(this.href, 'shre', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + width + ',height=' + height);
-				} );
-			} );
-
-			if( !navigator.userAgent.match( /(iphone|android)/gi ) && !!document.querySelector ) {
-				document.querySelector( '.share-reveal' ).style.display = 'block';
-				document.querySelector( '.fork-reveal' ).style.display = 'block';
-			}
-		</script>
-
 	</body>
 </html>
